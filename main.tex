@@ -1,0 +1,98 @@
+\documentclass[10pt]{article}
+
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    % total={170mm,257mm},
+    left=43.9mm,
+    right=43.9mm,
+    top=52.1mm,
+    bottom=52.1mm,
+    }
+
+\usepackage[backend=biber,style=numeric]{biblatex}
+\addbibresource{References.bib}
+
+\usepackage{pgfgantt}
+\usepackage{booktabs}
+\usepackage{tabulary} %for text tables
+\usepackage{mathtools}%loads amsmath
+\usepackage{bm}
+\usepackage{amssymb,amsfonts}
+\usepackage{subcaption}
+% \usepackage[caption=false]{subfig}
+% \captionsetup{width=\linewidth}
+\usepackage{enumitem}
+
+%%%%% shortcut commands
+\newcommand{\famsec}{FaMSeC}
+\newcommand{\solve}{$\mathcal{S}$}
+\newcommand{\solvestar}{$\mathcal{S}^*$}
+\newcommand{\taskclass}{$c_{\mathcal{T}}$}
+\newcommand{\task}{$\mathcal{T}$}
+\newcommand{\taski}{$\mathcal{T}_i$}
+\newcommand{\taskN}{$\mathcal{T}_N$}
+\newcommand{\rwd}{$\mathcal{R}$}
+\newcommand{\rwdstar}{$\mathcal{R}^*$}
+\newcommand{\rwdstari}{$\mathcal{R}^*_i$}
+\newcommand{\rwdstarN}{$\mathcal{R}^*_N$}
+\newcommand{\rwdstarapprox}{$\widetilde{\mathcal{R}}^*$}
+\newcommand{\rwdstariapprox}{$\widetilde{\mathcal{R}}^*_i$}
+\newcommand{\policy}{$\mathcal{\pi}$}
+\newcommand{\policystar}{$\mathcal{\pi}^*$}
+\newcommand{\surrogate}{$\mathcal{M}^*(\mathcal{T})$}
+\newcommand{\xQ}{$x_Q$} %solver quality
+\newcommand{\xO}{$x_O$} %outcome assessment
+\newcommand{\xP}{$x_P$} %past performance
+\newcommand{\xI}{$x_I$}
+\newcommand{\xM}{$x_M$}
+\newcommand{\xSC}{$x_{SC}$=\{\xI,\xM,\xQ,\xO,\xP \}}
+\newcommand{\dkl}{$D_{KL}$}
+\newcommand{\hell}{$H^2$}
+\def\-{\raisebox{.75pt}{-}} %short negative sign
+%%%%%%%%%%
+\newcommand{\hlr}[1]{{\color{red} #1}}
+\newcommand{\hlb}[1]{{\color{blue} #1}}
+\newcommand{\hlo}[1]{{\color{orange} #1}}
+\newcommand{\nisar}[1]{\hlr{NRA: #1}}
+\newcommand{\brett}[1]{\hlb{BWI: #1}}
+
+%%%%%%%%%%
+
+% PDFINFO
+% You are required to complete the following
+% for pass-through to the PDF. 
+% No LaTeX commands of any kind may be
+% entered. The parentheses and spaces 
+% are an integral part of the 
+% pdfinfo script and must not be removed.
+\pdfinfo{
+/Title (Machine Self-Confidence in Autonomous Systems via  Meta-Analysis of Decision Processes)
+/Author (Author 1, Author 2, Author 3, Author 4, Author 5)
+/Keywords (Trust, Transparency, Planning)
+}
+\setcounter{secnumdepth}{2}
+\title{Machine Self-Confidence in Autonomous Systems \\ via  Meta-Analysis of Decision Processes}%Internal Decision Processes}%%Decision Making Under Uncertainty}%% 
+\author{Author 1 \ Author 2 \ Author 3 \ Author 4 \ Author 5\\ 
+        Prestigious Institution\\
+        City\\
+        State\\
+        Country
+    }
+
+\begin{document}
+\maketitle
+\begin{abstract}
+    Algorithmic assurances from advanced autonomous systems assist human users in understanding, trusting, and using such systems appropriately. Designing these systems with the capacity of assessing their own capabilities is one approach to creating an algorithmic assurance. The idea of `machine self-confidence' is introduced for autonomous systems. Using a factorization based framework for self-confidence assessment, one component of self-confidence, called `solver-quality', is discussed in the context of Markov decision processes for autonomous systems. Markov decision processes underlie much of the theory of reinforcement learning, and are commonly used for planning and decision making under uncertainty in robotics and autonomous systems. A `solver quality' metric is formally defined in the context of decision making algorithms based on Markov decisions processes. A method for assessing solver quality  is then derived, drawing inspiration from empirical hardness models. Finally, numerical experiments for an unmanned autonomous vehicle navigation problem under different solver, parameter, and environment conditions indicate that the self-confidence metric exhibits the desired properties. Discussion of results, and avenues for future investigation are included.
+\end{abstract}
+
+\input{"introduction.tex"}
+\input{"FaMSeC.tex"}
+\input{"methodology.tex"}
+\input{"results.tex"}
+\input{"experiment_results.tex"}
+\input{"conclusions.tex"}
+
+\printbibliography
+
+\end{document}
