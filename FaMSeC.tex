@@ -48,7 +48,7 @@ By indicating how likely favorable outcomes are expected relative to unfavorable
  Since ref. \cite{Aitken2016-cv} does not specify how to compute other factors, nor how to cope with interdependencies between factors that will arise when assumptions such as those above are relaxed, it is natural to consider how these insights extend to computation and analysis of other \famsec{} factors. For instance, what does information related to the assessment of \xO{} tell us about how other factors should be assessed? In particular, since \xO indirectly depends on \xQ, we next consider how to use $p(R_{\infty})$ to also derive a metric for \xQ. Namely, if we consider that an MDP-based APS must in practice often rely on an approximate policy $\tilde{\pi}$ instead of the true optimal policy $\pi$, then a quantitative comparison of $p_{\tilde{\pi}}(R_{\infty})$ to $p_{\pi}(R_{\infty})$ provides a metric for \xQ. The remainder of this paper explores how strategies for assessing \xQ along these lines (under the progressively relaxed assumption of \xM{}=+1, \xP{}=+1, and \xI{}=+1). 
 
 \subsection{Outcome Assessment (\xP)} \label{sec:OA}
-\brett{Add a couple paragraphs here about \xP.
+\brett{Add a couple paragraphs here about \xP.}
 Here we need to talk about \xP{} and show the equations(?) for UPM/LPM. Also, give a quick word or two about how the metric can be intuitively understood.
 
 \subsection{Solver Quality (\xQ)} \label{sec:SQ}
@@ -61,7 +61,7 @@ Here we need to talk about \xP{} and show the equations(?) for UPM/LPM. Also, gi
     \brett{Need to cut out a bunch of this, and just give a quick overview. We also want to make room for \xP{} as well. Anchor everything around Fig. \ref{fig:sq_v2}}
     The main aim of \xQ{} is to indicate how a solver \solve{} will perform on a given (possibly un-encountered) task \task{} of a given class \taskclass{} (i.e. all road networks with a UGV, Pursuer, and exit, et cetera as described previously). The need for \xQ{} is not necessarily easy to understand; an analogy helps to clarify:
     
-    \brett{I have now started thinking about \xP{} being the \emph{shape} of the distribution, and \xQ{} referring to the location of the distribution \wrt the trusted \solvestar{}}
+    \brett{I have now started thinking about \xP{} being the \emph{shape} of the distribution, and \xQ{} referring to the location of the distribution wrt the trusted \solvestar{}}
     \emph{Clarifying Example:} One could informally think of \xQ{} as an indication of the \emph{ability} of an athlete. This is opposed to the athlete's assessment of the desirability of the outcome of a game (\xO). While an athlete may be very capable (high \xQ), the score of the game may be such that the athlete knows that it is nearly impossible to catch up and win the game (low \xO). Conversely, an athlete may not be very capable (low \xQ), and due to being na\"{i}ve has an incorrect assessment of the desirability of the outcome (\xO{} cannot be trusted).
     
     The formal desiderata for \xQ{} are:
