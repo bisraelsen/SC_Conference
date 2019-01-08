@@ -49,7 +49,7 @@ By indicating how likely favorable outcomes are expected relative to unfavorable
 
 \subsection{Outcome Assessment (\xP)} \label{sec:OA}
 \brett{Add a couple paragraphs here about \xP.
-Here we need to talk about \xP{} and show the equations(?) for UPM/LPM. Also, give a quick word or two about how the metric can be intuitively understood.
+Here we need to talk about \xP{} and show the equations(?) for UPM/LPM. Also, give a quick word or two about how the metric can be intuitively understood.}
 
 \subsection{Solver Quality (\xQ)} \label{sec:SQ}
    \begin{figure}[tb]
@@ -61,7 +61,7 @@ Here we need to talk about \xP{} and show the equations(?) for UPM/LPM. Also, gi
     \brett{Need to cut out a bunch of this, and just give a quick overview. We also want to make room for \xP{} as well. Anchor everything around Fig. \ref{fig:sq_v2}}
     The main aim of \xQ{} is to indicate how a solver \solve{} will perform on a given (possibly un-encountered) task \task{} of a given class \taskclass{} (i.e. all road networks with a UGV, Pursuer, and exit, et cetera as described previously). The need for \xQ{} is not necessarily easy to understand; an analogy helps to clarify:
     
-    \brett{I have now started thinking about \xP{} being the \emph{shape} of the distribution, and \xQ{} referring to the location of the distribution \wrt the trusted \solvestar{}}
+    \brett{I have now started thinking about \xP{} being the \emph{shape} of the distribution, and \xQ{} referring to the location of the distribution with respect to the trusted \solvestar{}}
     \emph{Clarifying Example:} One could informally think of \xQ{} as an indication of the \emph{ability} of an athlete. This is opposed to the athlete's assessment of the desirability of the outcome of a game (\xO). While an athlete may be very capable (high \xQ), the score of the game may be such that the athlete knows that it is nearly impossible to catch up and win the game (low \xO). Conversely, an athlete may not be very capable (low \xQ), and due to being na\"{i}ve has an incorrect assessment of the desirability of the outcome (\xO{} cannot be trusted).
     
     The formal desiderata for \xQ{} are:
@@ -75,5 +75,5 @@ Here we need to talk about \xP{} and show the equations(?) for UPM/LPM. Also, gi
     For practical application, it is critical to be able to compare the quality of solvers of different classes (i.e. exact vs. approximate) because there are many different ways of solving tasks. Likewise, it is also common for an APS to encounter a similar, but previously unseen, task (i.e. a different road network).
     
     Evaluating the `quality' of something implies some kind of comparison is taking place. In this setting the desired comparison is between a `candidate solver' \solve{} and some reference solver. Ideally, the candidate solver could be compared to the exact solution (whose quality is by definition perfect), but there are three main challenges: 1) It is unclear how policies/solvers should be compared; 2) Large state spaces make exact solutions infeasible; 3) It is generally impossible to evaluate the exact solution for \emph{all} tasks of a given task class \taskclass{} (linked to \ref{itm:d3})
-        
-    \subsubsection{Summary} The comparison of policies will be done through comparing reward distributions; this approach addresses both \ref{itm:d1} and \ref{itm:d2}, along with \ref{itm:l1}. In order to address \ref{itm:l2}, \ref{itm:l3}, and \ref{itm:d3} a `trusted solver' \solvestar{} will be introduced to serve as a basis by which a `candidate solver' \solve{} can be evaluated. Furthermore, a surrogate model \surrogate{} will be learned to predict \rwdstarapprox{} on un-encountered tasks. In this way, all desiderata, and challenges have been addressed.
+        %
+    % \subsubsection{Summary} The comparison of policies will be done through comparing reward distributions; this approach addresses both \ref{itm:d1} and \ref{itm:d2}, along with \ref{itm:l1}. In order to address \ref{itm:l2}, \ref{itm:l3}, and \ref{itm:d3} a `trusted solver' \solvestar{} will be introduced to serve as a basis by which a `candidate solver' \solve{} can be evaluated. Furthermore, a surrogate model \surrogate{} will be learned to predict \rwdstarapprox{} on un-encountered tasks. In this way, all desiderata, and challenges have been addressed.

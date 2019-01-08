@@ -37,7 +37,7 @@ A toy example is useful in evaluating whether \xQ{} yields desirable results. Fi
 
 At B the candidate solver has a lower expected reward than the trusted solver and a higher variance than the trusted solver. Intuitively \xQ{} should be less than one. As shown when $r=5$ (i.e. $r_H-r_L=5$, the global reward range is `large') $x_Q=0.667$ which indicates that the candidate solver is marginally less capable than the trusted solver, and when $r=0.05$ then $x_Q=0.002$ indicates that \solve{} is much less capable than \solvestar.
 
-At C the candidate solver \solve{} has higher expected reward than \solvestar, but a larger variance. Intuitively we would expect \xQ{} of \solve{} to be a little greater than one, and in fact when $r=5$, $x_Q=1.095$. As the global reward range $r$ decreases the difference in capability between \solve{} and \solvestar{} increases with $x_Q=1.995$ at $r=0.005$. These calculations indicate that \xQ{} performs as expected. In Sec.~\ref{sec:results} a more realistic scenario is considered. 
+At C the candidate solver \solve{} has higher expected reward than \solvestar, but a larger variance. Intuitively we would expect \xQ{} of \solve{} to be a little greater than one, and in fact when $r=5$, $x_Q=1.095$. As the global reward range $r$ decreases the difference in capability between \solve{} and \solvestar{} increases with $x_Q=1.995$ at $r=0.005$. These calculations indicate that \xQ{} performs as expected. In Sec.~\ref{sec:exp_results} a more realistic scenario is considered. 
 
 \begin{figure}[tbp]
     \centering
