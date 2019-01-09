@@ -43,17 +43,7 @@ With this in mind, an important issue to consider for addressing (ii) is that th
 \end{figure}
 
 
-By indicating how likely favorable outcomes are expected relative to unfavorable outcomes according to a baseline performance measure $R^*_{\infty}$, self-confidence measures like the UPM/LPM score provides information about the consequences of applying policy $\pi$ to a task by interpreting the full shape of the cumulative reward distribution $p_{\pi}(R_{\infty})$, i.e. beyond just the mean value of $R_{\infty}$ (which the optimal $\pi$ maximizes) or the variance/entropy of $p_{\pi}(R_{\infty})$. As illustrated in Fig.~\ref{fig:xOexample} this allows \xO{} to be used as a second-order uncertainty measure for assessing intrinsic task difficulty---and hence indicates a measure of APS competency that can be reported to users to calibrate their trust. %%\nisar{explanations underneath figs not obvious -- mention how user could drill?}
-
- Since ref. \cite{Aitken2016-cv} does not specify how to compute other factors, nor how to cope with interdependencies between factors that will arise when assumptions such as those above are relaxed, it is natural to consider how these insights extend to computation and analysis of other \famsec{} factors. For instance, what does information related to the assessment of \xO{} tell us about how other factors should be assessed? In particular, since \xO indirectly depends on \xQ, we next consider how to use $p(R_{\infty})$ to also derive a metric for \xQ. Namely, if we consider that an MDP-based APS must in practice often rely on an approximate policy $\tilde{\pi}$ instead of the true optimal policy $\pi$, then a quantitative comparison of $p_{\tilde{\pi}}(R_{\infty})$ to $p_{\pi}(R_{\infty})$ provides a metric for \xQ. The remainder of this paper explores how strategies for assessing \xQ along these lines (under the progressively relaxed assumption of \xM{}=+1, \xP{}=+1, and \xI{}=+1). 
-
-\subsection{Outcome Assessment (\xP)} \label{sec:OA}
-\brett{Add a couple paragraphs here about \xP.
-Here we need to talk about \xP{} and show the equations(?) for UPM/LPM. Also, give a quick word or two about how the metric can be intuitively understood.}
-
-\subsection{Solver Quality (\xQ)} \label{sec:SQ}
-   \begin{figure}[tb]
-        \centering
+By indicating how likely favorable outcomes are expected relative to unfavorable outcomes according to a baseline performance measure $R^*_{\infty}$, self-confidence measures like the UPM/LPM score provides gm1 = fit(GeneralizedLinearModel, @formula(Counts ~ Outcome + Treatment), dobson, Poisson())
         \includegraphics[width=0.6\linewidth]{Figures/sq_v2_fig-crop}
         \caption{Key values involved in calculating \xQ, where $x$ represents a `parameter of interest' for task \task, or solver \solve.}
         \label{fig:sq_v2}
