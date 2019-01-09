@@ -3,7 +3,7 @@ How, then, can \xQ{} be calculated? Following from discussion in the previous se
 
 The candidate solver \solve{} must then be evaluated w.r.t. the trusted solver \solvestar{}. This is done by comparing \rwdstarapprox{} (the predicted performance of \solvestar{} on task \task) and \rwd{} (the simulated performance of solver \solve{} on task \task) as illustrated in Fig.~\ref{fig:sq_test}.
 
-Figure \ref{fig:sq_v2} illustrates some of the key quantities involved in calculating \xQ. The basic premise is: \emph{find the difference between the trusted ($T$) and candidate ($C$) solvers while taking into account the overall range of rewards of the trusted solver over many tasks}. This is discussed further in \cite{Israelsen2018-qz}.
+Figure~\ref{fig:sq_v2} illustrates some of the key quantities involved in calculating \xQ. The basic premise is: \emph{find the difference between the reward distributions of the trusted ($T$) and candidate ($C$) solvers while taking into account the overall range of rewards of the trusted solver over many tasks}. This is discussed further in \cite{Israelsen2018-qz}.
 
 \begin{figure}[tbp]
     \centering
@@ -33,7 +33,7 @@ Here we will only present the key equations for calculating \xQ{} in the interes
 \end{align}
 
 \subsection{Examples}
-A toy example is useful in evaluating whether \xQ{} yields desirable results. Figure~\ref{fig:sq_thry1} illustrates a such an example, depicting the expected reward (with uncertainty) for a trusted solver \solvestar{} given a specific, generic, task/solver parameter, as well as that of a `candidate' solver \solve. Different points of interest (indicating specific values of the task parameter) are highlighted by a star. The table on the side shows the values of \xQ{} calculated for different cases.
+\brett{this may not be \emph{necessary}, but we mentioned in the submitted abstract that we have `numerical experiments' that show \xQ{} is useful. It would be helpful to make this as short as possible}.A toy example is useful in evaluating whether \xQ{} yields expected/desirable results. Figure~\ref{fig:sq_thry1} illustrates such an example, depicting the expected reward (with uncertainty) for a trusted solver \solvestar{} given a specific, generic, task/solver parameter, as well as that of a `candidate' solver \solve. Different points of interest (indicating specific values of the task parameter) are highlighted by a star. The table on the side shows the values of \xQ{} calculated for different cases.
 
 At B the candidate solver has a lower expected reward than the trusted solver and a higher variance than the trusted solver. Intuitively \xQ{} should be less than one. As shown when $r=5$ (i.e. $r_H-r_L=5$, the global reward range is `large') $x_Q=0.667$ which indicates that the candidate solver is marginally less capable than the trusted solver, and when $r=0.05$ then $x_Q=0.002$ indicates that \solve{} is much less capable than \solvestar.
 
