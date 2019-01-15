@@ -72,7 +72,7 @@
 % /Keywords (Trust, Transparency, Planning)
 % }
 \setcounter{secnumdepth}{2}
-\title{Machine Self-Confidence in Autonomous Systems \\ via  Meta-Analysis of Decision Processes}%Internal Decision Processes}%%Decision Making Under Uncertainty}%% 
+\title{Machine Self-Confidence in Autonomous Systems via  Meta-Analysis of Decision Processes}%Internal Decision Processes}%%Decision Making Under Uncertainty}%% 
 \author{Brett Israelsen\inst{1} \and
 Nisar Ahmed \inst{1} \and
 Eric Frew \inst{1} \and \\
@@ -91,10 +91,13 @@ Brian Argrow \inst{1}
 \begin{document}
 \maketitle
 \begin{abstract}
-    Algorithmic assurances from advanced autonomous systems assist human users in understanding, trusting, and using such systems appropriately. Designing these systems with the capacity of assessing their own capabilities is one approach to creating an algorithmic assurance. The idea of `machine self-confidence' is introduced for autonomous systems. Using a factorization based framework for self-confidence assessment, one component of self-confidence, called `solver-quality', is discussed in the context of Markov decision processes for autonomous systems. Markov decision processes underlie much of the theory of reinforcement learning, and are commonly used for planning and decision making under uncertainty in robotics and autonomous systems. A `solver quality' metric is formally defined in the context of decision making algorithms based on Markov decision processes. A method for assessing solver quality is then derived, drawing inspiration from empirical hardness models. Numerical experiments for an unmanned autonomous vehicle navigation problem under different solver, parameter, and environment conditions indicate that the self-confidence metric exhibits the desired properties. Finally, initial experimental results reflecting the effects of `solver quality' on human behavior are presented. Discussion of results, and avenues for future investigation are included.
+    Algorithmic assurances assist human users in understanding, trusting, and using advanced autonomous systems appropriately. This work explores one approach to creating assurances in which systems self-assess their decision-making capabilities under uncertainty, resulting in a measure of `self-confidence'. 
+    We briefly review a factor-based meta-analysis framework for self-confidence assessment and reporting, and then develop a new factor pertaining to `solver quality' in the context of solving Markov decision processes (MDPs), which are widely used for autonomous systems. A novel method for computing solver quality self-confidence is derived, drawing inspiration from empirical hardness models. Numerical experiments for an unmanned autonomous vehicle navigation problem show that our approach exhibits desirable properties for enabling an MDP-based agent to self-asses its fitness to complete a given task under different solver, parameter, and environment conditions. Initial experimental results investigating the effects of self-confidence reporting on user tasking of a simulated autonomous vehicle are presented, showing ... \nisar{need to summarize the punchline preliminary conclusions here}... %%,and open promising avenues for future work. %Discussion of results, and avenues for future investigation are included. 
+    %%\nisar{need to modify this abstract, at least results part: results also include outcome assessment, but not mentioned at all here...}
 \end{abstract}
 
 \input{"introduction.tex"}
+\input{"background.tex"}
 \input{"FaMSeC.tex"}
 \input{"methodology.tex"}
 \input{"experiment_results.tex"}
