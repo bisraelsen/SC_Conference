@@ -6,13 +6,13 @@
 We establish algorithmic realizations of self-confidence assessments by initially studying APS capabilities that can be modeled as Markov decision processes (MDPs). MDPs are composed of finite states and actions for the APS that partially resolve the nondeterminism in state transitions by deciding from what probability distribution $p(\cdot)$ the next state will be sampled. %%The co-existence of nondeterministic and stochastic choices in MDPs are expressive enough to account for a range of uncertainties including adversarial environmental factors and inaccuracies in execution. %%, and limitations in prior knowledge (e.g. imperfect knowledge of $p(\cdot)$).  
 MDPs have well-established connections to other widely used approaches for autonomous decision-making and learning under uncertainty, such as partially observable MDPs (POMDPs) for decision-making in limited observability environments and reinforcement learning for decision-making with incomplete model information \cite{Kochenderfer2015-uu}. As such, they provide an ideal starting point for an initial analysis of self-confidence that can be generalized in future work. 
 
-More formally, we consider generic MDP formulations of a task \task{} delegated to an APS. In an MDP framing of \task{}, the autonomous agent must find an optimal policy $\pi = u(x)$ for an MDP with dynamical state $x$ and actions $u$, such that the objective function
+More formally, we consider generic MDP formulations of a task \task{} delegated to an APS. In an MDP framing of \task{}, the autonomous agent must find an optimal policy $\policyopt = u(x)$ for an MDP with dynamical state $x$ and actions $u$, such that the objective function
 $U = \mathbb{E} \left[\sum_{k=0}^{\infty} \gamma^i r(x_k,u_k) \right]$ is maximized for all times $k=0,...,\infty$ --  
 where $R(x_k,u_k)$ rewards (penalizes) the APS for being in (un)desirable states and taking (un)desirable actions, $\mathbb{E}[\cdot]$ is the expected value over all possible future states, and $\gamma \in (0,1]$ is a (tunable) future discount factor. 
 Given any $u_k$, the state $x_k$ updates via a Markov probabilistic transition model $x_{k+1} \sim p(x_{k+1}|x_{k},u_{k})$,  
 i.e. $x_{i}$ is fully observed at time $i$ (no sensor noise), while transitions $i\rightarrow k+1$ have random perturbations.
-In a fully posed MDP, $\pi$ is the optimal state-action policy, which can be recovered from Bellman's equation via dynamic programming. 
-However, in many practical cases, policy approximations $\tilde{\pi}$ are required to cope with complex or uncertain dynamics (e.g. for reinforcement learning or very large state spaces) \cite{Kochenderfer2015-uu}. 
+In a fully posed MDP, $\policyopt$ is the optimal state-action policy, which can be recovered from Bellman's equation via dynamic programming. 
+However, in many practical cases, policy approximations $\policy$ are required to cope with complex or uncertain dynamics (e.g. for reinforcement learning or very large state spaces) \cite{Kochenderfer2015-uu}. 
     
     
 	\begin{figure}[t]%[htbp]
