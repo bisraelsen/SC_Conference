@@ -7,7 +7,9 @@ Of the two \famsec{} metrics discussed above (\xQ{} and \xO), each is either `pr
 
 Participants were paid a base rate of $\$1.60$ for completing the Human Intelligence Task (HIT), and were able to get a bonus of up to $\$1.00$ based on their performance. Pilot data indicated that this would be equivalent to approximately \$7-10/hr. In practice the `Turkers' were quite a bit faster than those in the pilot study, and earned around \$13/hr. Source code for the experiment is available on Github\footnote{\url{https://github.com/COHRINT/SC_experiment}}
 
-Generally, the each participant must decide whether the autonomous delivery vehicle should attempt to make a delivery, or decline the delivery. A successful delivery attempt results in $+1$ point, failure in $\-1$ point, and declining a delivery in $\-1/4$ point. After being trained (and passing a quiz), participants are given a randomized sequence of 43 different delivery scenarios with varying maps. \nisar{should say a bit more about how maps are created and scenarios selected to balance conditions} 
+Generally, the each participant must decide whether the autonomous delivery vehicle should attempt to make a delivery, or decline the delivery. A successful delivery attempt results in $+1$ point, failure in $\-1$ point, and declining a delivery in $\-1/4$ point. After being trained (and passing a quiz), participants are given a randomized sequence of 43 different delivery scenarios with varying maps.
+
+A pool of 500 possible road-networks were generated with varying N ($N=[8,35]$) and varying transition probability (probability of traveling in the desired direction as opposed to a different direction). The experiment set of 43 tasks is a subset of the pool of 500 road-networks sampled in a pseudo random way over the \xQ{}/\xO{} space in an attempt to avoid clustered samples.
 
 \subsection{Initial Results and Discussion}
 Some preliminary data comparing the difference in cumulative `total score' is shown in Figure~\ref{fig:total_score}. The total number of participants represented here is N=255, with $n=\{63,63,64,65\}$ for conditions 1-4 respectively. 
