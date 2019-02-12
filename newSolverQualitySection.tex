@@ -2,7 +2,7 @@
 
 %%\nisar{note to self: stopped here...also need to improve technical description: use more conventional phrasing like `surrogate function/model' to describe what is going on with the trusted solver...some of this is used later, but should be used here}
 
-The insights above are extended to formally define and compute the solver quality \famsec{} factor \xQ{}. In the context of APS planning, \xQ{} indicates how well a generic solver \solve{} for a planning problem will `perform' on a given task \task{} of class \taskclass{}. This work restricts \taskclass{} to the class of all applicable MDP problems, so that \solve{} is any type of MDP solver  (although the ideas developed here can in principle be easily extended beyond MDPs or planning problems alone). %%...(or for that matter, a planner for any other problem type, or APS algorithm for any other APS capability)
+The insights above are extended to formally define and compute the solver quality \famsec{} factor \xQ{}. For APS planning, \xQ{} indicates how well a generic solver \solve{} for a planning problem will `perform' on a given task \task{} of class \taskclass{}. We restrict \taskclass{} here to the class of all applicable MDP problems, so that \solve{} is any type of MDP solver  (although the ideas developed here are even more generalizable). %can be extended beyond MDPs alone). %%...(or for that matter, a planner for any other problem type, or APS algorithm for any other APS capability)
 
 
 A formal definition for \xQ{} must make the notion of \solve{}'s `performance' precise to enable some form of quantitative evaluation. For MDPs, any particular task instance \task{} has a corresponding optimal policy \piopt{} which by definition leads to corresponding best achievable total reward. This suggests that a natural performance metric for assessing the competence of a generic solver \solve{} would be some quantitative comparison of the (approximate) policy \piapprox{} to \piopt. Such a `strong' comparison can be done in many ways depending on the application context, e.g. by directly comparing actions taken by the policies in different states of interest, or by comparing the resulting expected total reward distributions or other artifacts of the different policies. 
@@ -52,7 +52,7 @@ At the same time, \xQ{} should account for the expected self-confidence metric t
     
        \begin{figure}[tb]
         \centering
-        \includegraphics[width=0.79\linewidth]{Figures/xQ_combined.png}
+        \includegraphics[width=0.7\linewidth]{Figures/xQ_combined.png}
         \caption{(Left) Key values for computing \xQ, where $x$ is a `feature of interest' for \task or \solve; (right) offline training phase of surrogate \surrogate{} and online calculation of \xQ{}. }
         \label{fig:sq_v3}
         \vspace{-0.2cm}
